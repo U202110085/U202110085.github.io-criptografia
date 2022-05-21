@@ -191,9 +191,6 @@ function mod(num, a) {
 }
 
 function encriptarMensaje() {
-	
-	n = document.getElementById("txt_clavePriv_n").value;
-	d = document.getElementById("txt_clavePriv_d").value;
 	var mensajeParaEncriptar = new String(document.getElementById("txt_mensajeParaEncriptar").value);
 
 	if (mensajeParaEncriptar <= 0) {
@@ -215,7 +212,6 @@ function encriptarMensaje() {
 			mensajeEncriptado += mod(mensajeaux, numeroN);
 			if (i < arregloNum.length - 1) mensajeEncriptado += " ";
 		}
-		numeroN = numeroD = numeroE = 0;
 		document.getElementById("txt_mensajeEncriptado").textContent = mensajeEncriptado;
 
 	}
